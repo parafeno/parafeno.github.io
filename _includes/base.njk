@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <style>
+    :root {
+      --texto: #1a1a1a;
+      --tenue: #9a9a93;
+      --fondo: #faf6f9;
+      --linea: #e6e4dd;
+    }
+    * { box-sizing: border-box; }
+    body {
+      max-width: 38rem;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 8rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--texto);
+      background: var(--fondo);
+    }
+    a { color: var(--texto); text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--tenue); }
+    a:hover { text-decoration-color: var(--texto); }
+    header.sitio {
+      margin-bottom: 4rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--linea);
+    }
+    header.sitio a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--tenue);
+    }
+    h1 { font-size: 1.5rem; font-weight: normal; line-height: 1.25; margin: 0 0 0.4rem; }
+    .meta { color: var(--tenue); font-size: 0.85rem; margin: 0 0 2.5rem; }
+    .lista { list-style: none; padding: 0; margin: 0; }
+    .lista li { margin-bottom: 2rem; }
+    .lista a.titulo { font-size: 1.2rem; text-decoration: none; }
+    .lista a.titulo:hover { text-decoration: underline; text-underline-offset: 2px; }
+    .lista .desc { color: var(--tenue); font-style: italic; }
+    .lista .fecha { color: var(--tenue); font-size: 0.8rem; display: block; margin-top: 0.2rem; }
+  </style>
+</head>
+<body>
+  <header class="sitio">
+    <a href="/">Mi blog</a>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+</body>
+</html>

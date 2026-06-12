@@ -1,0 +1,14 @@
+---
+layout: base.njk
+title: Mi blog
+---
+
+<ul class="lista">
+{% for post in collections.post | reverse %}
+  <li>
+    <a class="titulo" href="{{ post.url }}">{{ post.data.title }}</a>
+    {% if post.data.description %}<div class="desc">{{ post.data.description }}</div>{% endif %}
+    <span class="fecha">{{ post.date | fecha }}</span>
+  </li>
+{% endfor %}
+</ul>
