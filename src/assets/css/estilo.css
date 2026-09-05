@@ -322,12 +322,21 @@ p { margin: 0 0 1.15em; }
 .prensa-que { flex: 1 1 auto; max-width: var(--ancho-texto); }
 .prensa-que p { margin: 0; }
 .prensa-donde { }
+.prensa-donde a { text-decoration: none; }
+.prensa-donde a:hover { color: var(--acento); }
+.prensa-enlace {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.35em;
+  color: var(--acento);
+  vertical-align: -1px;
+}
 .prensa-tipo { color: var(--tinta-suave); font-style: italic; margin-bottom: 0.5em !important; }
 
 @media (max-width: 600px) {
   .prensa-fila { display: block; }
   .prensa-cuando { margin-bottom: 0.4em; }
-  .prensa-cuando br { display: none; }
 }
 
 /* ---------- Texto corrido -------------------------------------------- */

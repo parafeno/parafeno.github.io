@@ -13,7 +13,9 @@ permalink: "/press/index.html"
         {{ p.fecha }}{% if p.lugar %}<br>{{ p.lugar }}{% endif %}
       </div>
       <div class="prensa-que">
-        <p class="prensa-donde">{{ p.donde }}</p>
+        <p class="prensa-donde">
+          {% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.donde }}<svg class="prensa-enlace" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M8 7h9v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>{% else %}{{ p.donde }}{% endif %}
+        </p>
         <p class="prensa-tipo">{{ p.tipo }}</p>
         <p>{{ p.texto | safe }}</p>
       </div>

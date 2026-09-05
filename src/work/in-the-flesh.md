@@ -9,9 +9,8 @@ miniatura:
   src: /media/in-the-flesh/miniatura
   alt: "Fotograma de In the flesh"
 media:
-  - tipo: video
-    src: /media/in-the-flesh/in-the-flesh.mp4
-    poster: /media/in-the-flesh/miniatura-600.webp
+  - tipo: vimeo
+    id: "1224303969"
     ratio: "9 / 16"
 etiquetas: ["personal"]
 ---

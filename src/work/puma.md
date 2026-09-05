@@ -11,8 +11,8 @@ miniatura:
   src: /media/puma/01
   alt: "Puma"
 media:
-  - tipo: video
-    src: /media/puma/video-01.mp4
+  - tipo: vimeo
+    id: "1224305010"
     ratio: "720 / 900"
   - tipo: imagen
     src: /media/puma/01
