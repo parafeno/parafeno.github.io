@@ -32,11 +32,26 @@ pegar en vez de fragmentos sueltos, y valoraciones profesionales honestas por
 delante cuando algo sea mala idea o más trabajo del que parece. En español y
 sin em dashes.
 
+- Idioma: el contenido visible está en inglés, igual que el parafeno.com
+  actual, porque los clientes son internacionales. Los nombres de campos y
+  de clases CSS siguen en español, son código.
+- Pipeline de media: los originales pesados van en `originales/`, que está
+  excluido de git. `npm run imagenes` los convierte a webp en tres anchos
+  dentro de `media/`, que sí se sube. Los vídeos se recomprimen con ffmpeg
+  sin pista de audio antes de entrar en `media/`.
+
 ## Convenciones del código
 
 - Nombres de campos y de clases CSS en español, sin acentos en los nombres de
   archivo ni en los identificadores.
 - Un archivo `.md` por proyecto en `src/proyectos/`. El nombre del archivo es
   la dirección de la página.
+- Los campos fijos de un proyecto son solo los que necesita la maquinaria:
+  `titulo`, `cliente`, `anio`, `tipo` y `orden`. Todo lo demás va en `datos`,
+  una lista de líneas libres, porque cada proyecto tiene datos distintos.
+- `tipo` admite un valor suelto o una lista: hay proyectos que son comerciales
+  y personales a la vez.
+- Las rutas de imagen van sin extensión: el atajo `{% imagen %}` monta el
+  srcset a partir del manifiesto `src/_data/imagenes.json`.
 - Toda la apariencia se controla desde las variables de `:root` en
   `src/assets/css/estilo.css`.
