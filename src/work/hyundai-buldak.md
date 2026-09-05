@@ -1,5 +1,5 @@
 ---
-titulo: "Hyundai x Buldak"
+titulo: "Hyundai"
 cliente: "Hyundai x Buldak"
 anio: 2026
 tipo: comercial

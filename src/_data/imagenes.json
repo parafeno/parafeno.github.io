@@ -1,4 +1,78 @@
 {
+  "/media/6orka/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/6orka/02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1199
+  },
+  "/media/algo/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1200
+  },
+  "/media/algo/02": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/algo/miniatura": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 450
+  },
+  "/media/amazon/miniatura": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1500
+  },
+  "/media/belen-aguilera/miniatura": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/byredo/miniatura": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 750
+  },
+  "/media/carolina-herrera-mtv/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1334
+  },
   "/media/charlie-smits/01": {
     "anchos": [
       600,
@@ -95,6 +169,55 @@
     "ancho": 1200,
     "alto": 800
   },
+  "/media/cuerpo/01": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 900
+  },
+  "/media/cuerpo/02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 852
+  },
+  "/media/cuerpo/03": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 887
+  },
+  "/media/cuerpo/04": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 800
+  },
+  "/media/david-yurman/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1000
+  },
+  "/media/david-yurman/miniatura": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
   "/media/desigual/01": {
     "anchos": [
       600,
@@ -129,12 +252,56 @@
     "ancho": 600,
     "alto": 1067
   },
+  "/media/desigual-aw-24/miniatura": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 1067
+  },
   "/media/dior/miniatura": {
     "anchos": [
       600
     ],
     "ancho": 600,
     "alto": 1067
+  },
+  "/media/duty-dollz-2000/01": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 750
+  },
+  "/media/duty-dollz-2000/02": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 750
+  },
+  "/media/duty-dollz-2000/03": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 750
+  },
+  "/media/duty-dollz-2000/04": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 750
+  },
+  "/media/hoff/miniatura": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
   },
   "/media/hyundai-buldak/01": {
     "anchos": [
@@ -151,6 +318,139 @@
     "alto": 800
   },
   "/media/in-the-flesh/miniatura": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 1067
+  },
+  "/media/interrogacion-amor/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/interrogacion-amor/02": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/interrogacion-amor/03": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/interrogacion-amor/04": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/judeline/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/judeline-en-el-cielo/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/judeline-en-el-cielo/02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/judeline-en-el-cielo/03": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/la-casa-encendida/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1619
+  },
+  "/media/la-casa-encendida/miniatura": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1619
+  },
+  "/media/la-vuelta/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/la-vuelta/02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/la-vuelta/03": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/la-vuelta/miniatura": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/lexus-adnforum/miniatura": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/lexus-takumi/miniatura": {
     "anchos": [
       600
     ],
@@ -218,5 +518,471 @@
     ],
     "ancho": 1200,
     "alto": 675
+  },
+  "/media/marinadorciud/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/mmmad-22/miniatura": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 800
+  },
+  "/media/muzsi/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/muzsi/02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1200
+  },
+  "/media/natalia-lacunza/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/natalia-lacunza/02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/natalia-lacunza/03": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/natalia-lacunza/04": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/natalia-lacunza/05": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 688
+  },
+  "/media/natalia-lacunza/06": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/niihai/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1600
+  },
+  "/media/niihai/02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1600
+  },
+  "/media/niihai/03": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1600
+  },
+  "/media/niihai/04": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1600
+  },
+  "/media/niihai/poster-1": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1600
+  },
+  "/media/nino-de-las-tres-torres/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1600
+  },
+  "/media/non-portrait/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1600
+  },
+  "/media/olistic/miniatura": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/pemau/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/pemau/02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1200
+  },
+  "/media/puma/01": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 750
+  },
+  "/media/puma/02": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 748
+  },
+  "/media/puma/03": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 748
+  },
+  "/media/puma/04": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 750
+  },
+  "/media/recycled-j/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1000
+  },
+  "/media/recycled-j/02": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 600
+  },
+  "/media/reflash-vlex/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/reflash-vlex/02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/reflash-vlex/03": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/reflash-vlex/04": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/reflash-vlex/05": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/reflash-vlex/06": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/reino-de-los-duendes/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1778
+  },
+  "/media/saiko/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/saiko/02": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1334
+  },
+  "/media/saiko/03": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/saiko/04": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1480
+  },
+  "/media/saiko/05": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/saiko/06": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1982
+  },
+  "/media/saiko/07": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/saiko/08": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 600
+  },
+  "/media/saiko/miniatura": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/samantha-hudson/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/samantha-hudson/02": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/samantha-hudson/03": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1248
+  },
+  "/media/samantha-hudson/04": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 800
+  },
+  "/media/vision-bags/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1600
+  },
+  "/media/vision-bags/02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1600
+  },
+  "/media/vision-bags/03": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1314
+  },
+  "/media/vision-bags/04": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1500
+  },
+  "/media/vision-bags/05": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1314
+  },
+  "/media/vlex/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1200
+  },
+  "/media/vlex/02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1200
+  },
+  "/media/vlex/03": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1200
+  },
+  "/media/vlex/04": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1200
+  },
+  "/media/worlds-fair/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1600
+  },
+  "/media/worlds-fair/miniatura": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1600
   }
 }

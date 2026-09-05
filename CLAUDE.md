@@ -52,6 +52,8 @@ sin em dashes.
 - Idioma: el contenido visible está en inglés, igual que el parafeno.com
   actual, porque los clientes son internacionales. Los nombres de campos y
   de clases CSS siguen en español, son código.
+- Los SVG no se convierten: se copian tal cual a `media/` y en el proyecto se
+  enlazan con su extensión. Rasterizar un logo vectorial solo empeora.
 - Pipeline de media: los originales pesados van en `originales/`, que está
   excluido de git. `npm run imagenes` los convierte a webp en tres anchos
   dentro de `media/`, que sí se sube. Los vídeos se recomprimen con ffmpeg

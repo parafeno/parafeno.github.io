@@ -23,7 +23,7 @@ const MANIFIESTO = path.join("src", "_data", "imagenes.json");
 
 const ANCHOS = [600, 1200, 2000];
 const CALIDAD = 78;
-const EXTENSIONES = [".jpg", ".jpeg", ".png", ".tif", ".tiff", ".webp", ".avif"];
+const EXTENSIONES = [".jpg", ".jpeg", ".png", ".tif", ".tiff", ".webp", ".avif", ".svg"];
 
 // ---------------------------------------------------------------------
 
@@ -62,6 +62,22 @@ async function main() {
     const relativa = path.relative(ORIGEN, original);          // proyecto/01.png
     const sinExtension = relativa.slice(0, -path.extname(relativa).length);
     const base = aUrl(path.join(DESTINO, sinExtension));       // /media/proyecto/01
+
+    // Un SVG es vectorial: se ve nitido a cualquier tamano y pesa poco.
+    // Convertirlo a webp solo empeoraria las cosas, asi que se copia tal
+    // cual y en el proyecto se enlaza con su extension.
+    if (path.extname(original).toLowerCase() === ".svg") {
+      const salida = path.join(DESTINO, relativa);
+      fs.mkdirSync(path.dirname(salida), { recursive: true });
+      const mtime = fs.statSync(original).mtimeMs;
+      if (!fs.existsSync(salida) || fs.statSync(salida).mtimeMs < mtime) {
+        fs.copyFileSync(original, salida);
+        convertidas++;
+        console.log(`  ${aUrl(salida)}  ${kb(fs.statSync(salida).size)} KB  (vectorial, sin tocar)`);
+      } else saltadas++;
+      pesoTotal += fs.statSync(salida).size;
+      continue;
+    }
 
     let meta;
     try {
