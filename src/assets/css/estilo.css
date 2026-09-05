@@ -354,4 +354,10 @@ p { margin: 0 0 1.15em; }
   .indice   { order: 3; border-top: 1px solid var(--tinta-suave); padding-top: 1.8em; }
 
   .rejilla { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+
+  /* En la portada no hay contenido entre la marca y el indice: el filete
+     de separacion solo tiene sentido cuando el indice viene detras de un
+     proyecto. Aqui se quita y el indice sube justo debajo del logo. */
+  .portada .marca  { margin-bottom: 0.6em; }
+  .portada .indice { border-top: none; padding-top: 0; }
 }
