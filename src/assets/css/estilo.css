@@ -250,8 +250,6 @@ p { margin: 0 0 1.15em; }
   margin: 0 0 1.15em;
 }
 
-.intro { margin-bottom: 1.8em; max-width: var(--ancho-texto); }
-
 .rejilla {
   list-style: none;
   margin: 0;

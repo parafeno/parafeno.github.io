@@ -3,10 +3,8 @@ layout: layouts/base.njk
 titulo: false
 descripcion: "Pablo Aragon. Artista visual y generalista CGI. Madrid."
 ---
-{% from "partials/rejilla.njk" import rejilla %}
-
-<section class="intro">
-  <p>{{ site.autor }}. Madrid based visual artist and CGI generalist.</p>
-</section>
-
-{{ rejilla(collections.proyectos) }}
+{# La portada es solo el indice lateral: sin rejilla ni texto de
+   presentacion. Las piezas se ven al clickar un proyecto o el "+" hacia
+   /art/ o /commissions/. Asi en movil, donde el indice pasa al final del
+   flujo, no hay que hacer scroll por una rejilla vacia de contenido antes
+   de llegar a el. #}
