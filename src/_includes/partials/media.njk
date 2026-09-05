@@ -1,0 +1,45 @@
+{# ------------------------------------------------------------------
+   Macro que dibuja UNA pieza de media dentro de un proyecto.
+   Entiende cuatro tipos: imagen, vimeo, youtube y video (archivo local).
+   Si manana cambias de sistema de video, solo se toca este archivo.
+   ------------------------------------------------------------------ #}
+
+{% macro pieza(item, alt_por_defecto = "") %}
+  {% set ratio = item.ratio or "16 / 9" %}
+
+  <figure class="media media--{{ item.tipo }}">
+
+    {% if item.tipo == "imagen" %}
+      <img src="{{ item.src }}"
+           alt="{{ item.alt or alt_por_defecto }}"
+           loading="lazy"
+           decoding="async">
+
+    {% elif item.tipo == "vimeo" %}
+      <div class="marco" style="aspect-ratio: {{ ratio }}">
+        <iframe src="https://player.vimeo.com/video/{{ item.id }}?title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"
+                title="{{ item.caption or alt_por_defecto }}"
+                loading="lazy"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+
+    {% elif item.tipo == "youtube" %}
+      <div class="marco" style="aspect-ratio: {{ ratio }}">
+        <iframe src="https://www.youtube-nocookie.com/embed/{{ item.id }}?rel=0"
+                title="{{ item.caption or alt_por_defecto }}"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+
+    {% elif item.tipo == "video" %}
+      <video src="{{ item.src }}"
+             {% if item.poster %}poster="{{ item.poster }}"{% endif %}
+             style="aspect-ratio: {{ ratio }}"
+             playsinline muted loop autoplay preload="metadata"></video>
+    {% endif %}
+
+    {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
+  </figure>
+{% endmacro %}

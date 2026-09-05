@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+titulo: "Personal"
+permalink: "/personal/index.html"
+---
+{% from "partials/rejilla.njk" import rejilla %}
+
+<h1 class="pagina-titulo">Personal</h1>
+{{ rejilla(collections.personales) }}

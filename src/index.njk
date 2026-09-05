@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+titulo: false
+descripcion: "Pablo Aragon. Artista visual y generalista CGI. Madrid."
+---
+{% from "partials/rejilla.njk" import rejilla %}
+
+<section class="intro">
+  <p>{{ site.autor }}. Artista visual y generalista CGI. Madrid.</p>
+</section>
+
+{{ rejilla(collections.proyectos) }}

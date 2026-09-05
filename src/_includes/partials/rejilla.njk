@@ -1,0 +1,33 @@
+{# ------------------------------------------------------------------
+   Macro que dibuja una rejilla de miniaturas a partir de una lista
+   de proyectos. Se usa en la portada, en Comercial, en Personal y
+   al final de cada pagina de proyecto.
+   ------------------------------------------------------------------ #}
+
+{% macro rejilla(proyectos, excluir_url = "") %}
+  <ul class="rejilla">
+    {% for p in proyectos %}
+      {% if p.url != excluir_url %}
+        <li class="tarjeta">
+          <a href="{{ p.url }}">
+            <div class="tarjeta-imagen">
+              {% if p.data.miniatura %}
+                <img src="{{ p.data.miniatura.src }}"
+                     alt="{{ p.data.miniatura.alt or p.data.titulo }}"
+                     loading="lazy"
+                     decoding="async">
+              {% endif %}
+            </div>
+            <div class="tarjeta-texto">
+              <span class="tarjeta-titulo">{{ p.data.titulo }}</span>
+              <span class="tarjeta-meta">
+                {%- if p.data.cliente %}{{ p.data.cliente }} · {% endif -%}
+                {{ p.data.anio }}
+              </span>
+            </div>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endmacro %}

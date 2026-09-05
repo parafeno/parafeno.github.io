@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+---
+{% from "partials/media.njk" import pieza %}
+{% from "partials/rejilla.njk" import rejilla %}
+
+<article class="proyecto">
+
+  <header class="proyecto-cabecera">
+    <h1 class="proyecto-titulo">{{ titulo }}</h1>
+    <dl class="ficha">
+      {% if cliente %}<div><dt>Cliente</dt><dd>{{ cliente }}</dd></div>{% endif %}
+      {% if anio %}<div><dt>Año</dt><dd>{{ anio }}</dd></div>{% endif %}
+      {% if rol %}<div><dt>Rol</dt><dd>{{ rol }}</dd></div>{% endif %}
+      {% if estudio %}<div><dt>Estudio</dt><dd>{{ estudio }}</dd></div>{% endif %}
+      <div><dt>Tipo</dt><dd>{{ "Comercial" if tipo == "comercial" else "Personal" }}</dd></div>
+    </dl>
+  </header>
+
+  {% if media and media.length %}
+    <section class="proyecto-media">
+      {% for item in media %}
+        {{ pieza(item, titulo) }}
+      {% endfor %}
+    </section>
+  {% endif %}
+
+  {% if content %}
+    <section class="proyecto-texto prosa">
+      {{ content | safe }}
+    </section>
+  {% endif %}
+
+  {% if creditos and creditos.length %}
+    <section class="proyecto-creditos">
+      <h2>Créditos</h2>
+      <ul>
+        {% for c in creditos %}<li>{{ c }}</li>{% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+</article>
+
+<aside class="otros-proyectos">
+  <h2>Otros proyectos</h2>
+  {{ rejilla(collections.proyectos | otros(page.url, 6)) }}
+</aside>
