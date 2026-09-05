@@ -31,6 +31,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy("media");
 
+  // Dominio propio para GitHub Pages: sin este archivo en la raiz del
+  // sitio publicado, GitHub sirve solo en parafeno.github.io.
+  eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
+
   // Recargar el navegador cuando cambie algo en media/
   eleventyConfig.addWatchTarget("media");
 
