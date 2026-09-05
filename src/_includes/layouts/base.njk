@@ -9,23 +9,41 @@
 </head>
 <body>
 
-  <header class="cabecera">
+<div class="marco">
+
+  <aside class="lateral">
+
     <a class="marca" href="/">{{ site.nombre }}</a>
-    <nav class="menu">
-      <a href="/" {% if page.url == "/" %}class="activo"{% endif %}>Todo</a>
-      <a href="/comercial/" {% if page.url == "/comercial/" %}class="activo"{% endif %}>Comercial</a>
-      <a href="/personal/" {% if page.url == "/personal/" %}class="activo"{% endif %}>Personal</a>
-      <a href="/sobre/" {% if page.url == "/sobre/" %}class="activo"{% endif %}>Sobre</a>
+
+    <nav class="indice">
+
+      <a class="indice-titulo" href="/comercial/">Comercial</a>
+      <ul>
+        {% for p in collections.comerciales %}
+          <li><a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{{ p.data.titulo }}</a></li>
+        {% endfor %}
+      </ul>
+
+      <a class="indice-titulo" href="/personal/">Personal</a>
+      <ul>
+        {% for p in collections.personales %}
+          <li><a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{{ p.data.titulo }}</a></li>
+        {% endfor %}
+      </ul>
+
+      <ul class="indice-fijo">
+        <li><a href="/sobre/" {% if page.url == "/sobre/" %}class="activo"{% endif %}>Sobre</a></li>
+        <li><a href="mailto:{{ site.email }}">Contacto</a></li>
+      </ul>
+
     </nav>
-  </header>
+  </aside>
 
   <main class="contenido">
     {{ content | safe }}
   </main>
 
-  <footer class="pie">
-    <p>{{ site.autor }} · Madrid · <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-  </footer>
+</div>
 
 </body>
 </html>

@@ -2,47 +2,42 @@
 layout: layouts/base.njk
 ---
 {% from "partials/media.njk" import pieza %}
-{% from "partials/rejilla.njk" import rejilla %}
+{% from "partials/rejilla.njk" import lista %}
 
 <article class="proyecto">
 
-  <header class="proyecto-cabecera">
-    <h1 class="proyecto-titulo">{{ titulo }}</h1>
-    <dl class="ficha">
-      {% if cliente %}<div><dt>Cliente</dt><dd>{{ cliente }}</dd></div>{% endif %}
-      {% if anio %}<div><dt>Año</dt><dd>{{ anio }}</dd></div>{% endif %}
-      {% if rol %}<div><dt>Rol</dt><dd>{{ rol }}</dd></div>{% endif %}
-      {% if estudio %}<div><dt>Estudio</dt><dd>{{ estudio }}</dd></div>{% endif %}
-      <div><dt>Tipo</dt><dd>{{ "Comercial" if tipo == "comercial" else "Personal" }}</dd></div>
-    </dl>
-  </header>
+  <h1 class="proyecto-titulo">{{ titulo }}</h1>
+
+  <div class="proyecto-datos">
+    {% if cliente %}<p>{{ cliente }}</p>{% endif %}
+    {% if rol %}<p>{{ rol }}</p>{% endif %}
+    <p>{% if estudio %}{{ estudio }}, {% endif %}{{ anio }}</p>
+  </div>
 
   {% if media and media.length %}
-    <section class="proyecto-media">
+    <div class="proyecto-media">
       {% for item in media %}
         {{ pieza(item, titulo) }}
       {% endfor %}
-    </section>
+    </div>
   {% endif %}
 
   {% if content %}
-    <section class="proyecto-texto prosa">
+    <div class="proyecto-texto prosa">
       {{ content | safe }}
-    </section>
+    </div>
   {% endif %}
 
   {% if creditos and creditos.length %}
-    <section class="proyecto-creditos">
-      <h2>Créditos</h2>
-      <ul>
-        {% for c in creditos %}<li>{{ c }}</li>{% endfor %}
-      </ul>
-    </section>
+    <div class="proyecto-creditos">
+      <p>Créditos:</p>
+      {% for c in creditos %}<p>{{ c }}</p>{% endfor %}
+    </div>
   {% endif %}
 
-</article>
+  <div class="proyecto-otros">
+    <p class="etiqueta">Otros proyectos:</p>
+    {{ lista(collections.proyectos | otros(page.url, 8)) }}
+  </div>
 
-<aside class="otros-proyectos">
-  <h2>Otros proyectos</h2>
-  {{ rejilla(collections.proyectos | otros(page.url, 6)) }}
-</aside>
+</article>

@@ -1,33 +1,36 @@
 /* =====================================================================
    Parafeno. Hoja de estilos unica.
-   Todo el aspecto del sitio se controla desde las variables de :root.
-   Para pasar el sitio a fondo oscuro basta con cambiar --fondo y --tinta.
+   Todo el aspecto del sitio sale de las variables de :root.
+   Cambia --acento y cambia el color de todo el sitio.
    ===================================================================== */
 
 :root {
-  --fondo:        #ffffff;
-  --tinta:        #111111;
-  --tinta-suave:  #777777;
-  --linea:        #e4e4e4;
-  --marco:        #f2f2f2;   /* fondo de las miniaturas mientras cargan */
+  --fondo:       #ffffff;
+  --tinta:       #000000;
+  --tinta-suave: #7a7a7a;
+  --acento:      #ff00c8;   /* magenta de los titulos y del item activo */
+  --sobre-acento:#000000;   /* color del texto encima del magenta */
+  --marco:       #f2f2f2;   /* fondo de las imagenes mientras cargan */
 
-  --tipo: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --cuerpo: 15px;
-  --pequena: 13px;
+  --tipo: "Times New Roman", Times, Georgia, serif;
+  --cuerpo: 17px;
+  --interlinea: 1.45;
 
-  --hueco: 24px;             /* separacion de la rejilla */
-  --margen: 32px;            /* margen lateral de la pagina */
-  --ancho-max: 1600px;
-  --ancho-texto: 62ch;
+  --lateral: 210px;         /* ancho de la columna del indice */
+  --ancho-contenido: 1200px;/* limite del ancho de las imagenes y el video */
+  --hueco: 48px;            /* separacion entre indice y contenido */
+  --margen: 26px;           /* margen exterior de la pagina */
+  --ancho-texto: 68ch;
   --proporcion-miniatura: 4 / 3;
 }
 
-/* ---- Fondo oscuro: descomenta este bloque y comenta el de arriba ----
+/* ---- Fondo oscuro: descomenta y comenta el bloque de arriba --------
 :root {
   --fondo: #0d0d0d;
   --tinta: #f2f2f2;
   --tinta-suave: #8a8a8a;
-  --linea: #262626;
+  --acento: #ff00c8;
+  --sobre-acento: #000000;
   --marco: #1a1a1a;
 }
 --------------------------------------------------------------------- */
@@ -42,137 +45,101 @@ body {
   color: var(--tinta);
   font-family: var(--tipo);
   font-size: var(--cuerpo);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  line-height: var(--interlinea);
 }
 
 img, video, iframe { display: block; max-width: 100%; }
 
 a { color: inherit; text-decoration: none; }
-a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--acento); }
 
-/* ---------- Cabecera y pie ------------------------------------------ */
+p { margin: 0 0 1.15em; }
 
-.cabecera {
+/* ---------- Armazon: indice a la izquierda, contenido a la derecha --- */
+
+.marco {
   display: flex;
-  flex-wrap: wrap;
+  align-items: flex-start;
   gap: var(--hueco);
-  align-items: baseline;
-  justify-content: space-between;
-  max-width: var(--ancho-max);
-  margin: 0 auto;
-  padding: var(--margen) var(--margen) calc(var(--margen) / 1.5);
+  padding: var(--margen);
 }
 
-.marca { font-weight: 600; letter-spacing: 0.02em; }
-.marca:hover { text-decoration: none; }
-
-.menu { display: flex; gap: 18px; }
-.menu a { color: var(--tinta-suave); }
-.menu a.activo { color: var(--tinta); }
+.lateral {
+  flex: 0 0 var(--lateral);
+  position: sticky;
+  top: var(--margen);
+  max-height: calc(100vh - var(--margen) * 2);
+  overflow-y: auto;
+}
 
 .contenido {
-  max-width: var(--ancho-max);
-  margin: 0 auto;
-  padding: 0 var(--margen);
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: var(--ancho-contenido);
+  padding-bottom: 25vh;
 }
 
-.pie {
-  max-width: var(--ancho-max);
-  margin: 0 auto;
-  padding: calc(var(--margen) * 2) var(--margen) var(--margen);
-  color: var(--tinta-suave);
-  font-size: var(--pequena);
+/* ---------- Indice lateral ------------------------------------------ */
+
+.marca {
+  display: inline-block;
+  border: 1px solid var(--tinta);
+  border-radius: 14px;
+  padding: 7px 20px 9px;
+  font-size: 1.25em;
+  line-height: 1;
+  margin-bottom: 1.8em;
 }
+.marca:hover { color: var(--tinta); border-color: var(--acento); }
 
-/* ---------- Rejilla de miniaturas ------------------------------------ */
-
-.intro {
-  margin: 0 0 var(--hueco);
-  color: var(--tinta-suave);
-  max-width: var(--ancho-texto);
-}
-
-.rejilla {
+.indice ul {
   list-style: none;
-  margin: 0;
+  margin: 0 0 1.6em;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--hueco);
 }
 
-.tarjeta a { display: block; }
-.tarjeta a:hover { text-decoration: none; }
+.indice li { margin-bottom: 0.15em; }
 
-.tarjeta-imagen {
-  aspect-ratio: var(--proporcion-miniatura);
-  background: var(--marco);
-  overflow: hidden;
+.indice a {
+  display: inline;
+  padding: 1px 4px;
 }
 
-.tarjeta-imagen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.25s ease;
+.indice a.activo,
+.indice a.activo:hover {
+  background: var(--acento);
+  color: var(--sobre-acento);
 }
 
-.tarjeta a:hover .tarjeta-imagen img { opacity: 0.75; }
-
-.tarjeta-texto {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 8px;
-  padding-top: 8px;
-  font-size: var(--pequena);
+.indice-titulo {
+  display: block;
+  padding: 0 0 0.35em 4px;
+  color: var(--tinta-suave);
+  font-style: italic;
 }
 
-.tarjeta-titulo { }
-.tarjeta-meta { color: var(--tinta-suave); }
+.indice-fijo { margin-top: 2em; }
 
 /* ---------- Pagina de proyecto --------------------------------------- */
 
-.pagina-titulo {
-  font-size: var(--cuerpo);
-  font-weight: 600;
-  margin: 0 0 var(--hueco);
-}
-
-.proyecto-cabecera {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--hueco);
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-bottom: var(--hueco);
-}
-
 .proyecto-titulo {
-  font-size: var(--cuerpo);
-  font-weight: 600;
-  margin: 0;
+  color: var(--acento);
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0 0 1.15em;
 }
 
-.ficha {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 24px;
-  margin: 0;
-  font-size: var(--pequena);
-}
-.ficha div { display: flex; gap: 6px; }
-.ficha dt { color: var(--tinta-suave); }
-.ficha dd { margin: 0; }
+.proyecto-datos { margin-bottom: 1.6em; }
 
 .proyecto-media {
   display: flex;
   flex-direction: column;
-  gap: var(--hueco);
+  gap: 1.6em;
+  margin-bottom: 2em;
 }
 
 .media { margin: 0; }
-.media img, .media video { width: 100%; height: auto; }
+.media img, .media video { width: 100%; height: auto; background: var(--marco); }
 
 .media .marco { position: relative; width: 100%; background: var(--marco); }
 .media .marco iframe {
@@ -184,50 +151,92 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 
 .media figcaption {
-  padding-top: 8px;
-  font-size: var(--pequena);
+  padding-top: 0.5em;
   color: var(--tinta-suave);
 }
 
-.proyecto-texto,
-.proyecto-creditos {
-  max-width: var(--ancho-texto);
-  padding-top: calc(var(--hueco) * 1.5);
-}
+.proyecto-texto { margin-bottom: 2em; }
 
-.proyecto-creditos h2,
-.otros-proyectos h2 {
-  font-size: var(--pequena);
-  font-weight: 400;
-  color: var(--tinta-suave);
-  margin: 0 0 var(--hueco);
-}
+.proyecto-creditos { margin-bottom: 3.5em; }
+.proyecto-creditos p { white-space: pre-line; }
 
-.proyecto-creditos ul {
+/* ---------- Listas de proyectos en texto ----------------------------- */
+
+.etiqueta { color: var(--tinta-suave); font-style: italic; }
+
+.lista-proyectos {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  font-size: var(--pequena);
 }
 
-.otros-proyectos {
-  max-width: var(--ancho-max);
-  margin: 0 auto;
-  padding: calc(var(--margen) * 2) var(--margen) 0;
-  border-top: 1px solid var(--linea);
-  margin-top: calc(var(--margen) * 2);
+.lista-proyectos li { margin-bottom: 0.15em; }
+.lista-proyectos .lista-meta { color: var(--tinta-suave); }
+
+/* ---------- Rejilla de miniaturas ------------------------------------ */
+
+.pagina-titulo {
+  color: var(--acento);
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0 0 1.15em;
 }
+
+.intro { margin-bottom: 1.8em; max-width: var(--ancho-texto); }
+
+.rejilla {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.tarjeta a { display: block; }
+.tarjeta a:hover { color: inherit; }
+
+.tarjeta-imagen {
+  aspect-ratio: var(--proporcion-miniatura);
+  background: var(--marco);
+  overflow: hidden;
+}
+
+.tarjeta-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s ease;
+}
+
+.tarjeta a:hover .tarjeta-imagen img { opacity: 0.7; }
+
+.tarjeta-texto { padding-top: 5px; }
+.tarjeta a:hover .tarjeta-titulo { color: var(--acento); }
+.tarjeta-meta { color: var(--tinta-suave); }
 
 /* ---------- Texto corrido -------------------------------------------- */
 
 .prosa { max-width: var(--ancho-texto); }
-.prosa h2 { font-size: var(--cuerpo); font-weight: 600; margin: 2em 0 0.5em; }
-.prosa p { margin: 0 0 1em; }
+.prosa h2 { font-size: 1em; font-weight: normal; color: var(--acento); margin: 1.8em 0 1.15em; }
 .prosa a { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- Movil ----------------------------------------------------- */
 
-@media (max-width: 600px) {
-  :root { --margen: 18px; --hueco: 16px; }
+@media (max-width: 760px) {
+  :root { --margen: 18px; --hueco: 0px; }
+
+  /* "display: contents" hace que la columna lateral desaparezca como caja
+     y que la marca y el indice pasen a ser hijos directos del marco. Asi
+     se pueden reordenar: marca arriba, contenido en medio, indice al
+     final. Con 40 proyectos, tenerlos arriba obligaria a hacer scroll
+     antes de ver nada. */
+  .marco { display: flex; flex-direction: column; }
+  .lateral { display: contents; }
+
+  .marca    { order: 1; margin-bottom: 1.8em; }
+  .contenido { order: 2; max-width: none; padding-bottom: 3em; }
+  .indice   { order: 3; border-top: 1px solid var(--tinta-suave); padding-top: 1.8em; }
+
   .rejilla { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
 }

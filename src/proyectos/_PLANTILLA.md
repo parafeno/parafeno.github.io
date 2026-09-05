@@ -45,9 +45,15 @@ media:
     poster: /media/nombre-proyecto/loop.webp
     ratio: "16 / 9"
 
+# Cada credito puede ocupar varias lineas. La barra vertical "|"
+# indica que lo de debajo se respeta tal cual, con sus saltos de linea.
 creditos:
-  - "Dirección: Pablo Aragón"
-  - "Producción: "
+  - |
+    Dirección y CGI:
+    Pablo Aragón
+  - |
+    Producción:
+    Nombre del estudio
 
 etiquetas: ["cgi"]
 ---

@@ -1,7 +1,11 @@
 {# ------------------------------------------------------------------
-   Macro que dibuja una rejilla de miniaturas a partir de una lista
-   de proyectos. Se usa en la portada, en Comercial, en Personal y
-   al final de cada pagina de proyecto.
+   Dos formas de listar proyectos.
+
+   rejilla(): miniaturas en cuadricula. Se usa en la portada y en las
+   paginas de Comercial y Personal.
+
+   lista(): solo texto, una linea por proyecto. Se usa al final de cada
+   pagina de proyecto y en el indice lateral.
    ------------------------------------------------------------------ #}
 
 {% macro rejilla(proyectos, excluir_url = "") %}
@@ -28,6 +32,20 @@
           </a>
         </li>
       {% endif %}
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro lista(proyectos) %}
+  <ul class="lista-proyectos">
+    {% for p in proyectos %}
+      <li>
+        <a href="{{ p.url }}">{{ p.data.titulo }}</a>
+        <span class="lista-meta">
+          {%- if p.data.cliente %}{{ p.data.cliente }}, {% endif -%}
+          {{ p.data.anio }}
+        </span>
+      </li>
     {% endfor %}
   </ul>
 {% endmacro %}

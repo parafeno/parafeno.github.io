@@ -17,8 +17,12 @@ media:
     src: /media/ejemplos/grande-02.svg
     alt: "Detalle"
 creditos:
-  - "Dirección: Pablo Aragón"
-  - "Producción: Estudio Ejemplo"
+  - |
+    Dirección y CGI:
+    Pablo Aragón
+  - |
+    Producción:
+    Estudio Ejemplo
 etiquetas: ["cgi", "publicidad"]
 ---
 

@@ -8,8 +8,11 @@ Semplice y alojado en EasyWP.
 
 - Primero los datos y las páginas de proyecto. La portada, al final: es solo
   una vista sobre los datos y se puede cambiar sin tocar los proyectos.
-- La base es una rejilla sobria (referencia: mivides.com). El diagrama de
-  nodos conectados por líneas (referencia: bariscavusoglu.info) se explora
+- Dirección visual: bariscavusoglu.info. Tipografía serif sin adornos,
+  acento magenta, cero decoración, e índice lateral permanente con todos los
+  proyectos siempre a la vista. Sustituye a la rejilla sobria de mivides.com
+  que se probó primero (queda en el historial de git, commit dd817f9).
+- El diagrama de nodos conectados por líneas para la portada se explora
   después, sobre el mismo modelo de datos.
 - Vídeo fuera del repositorio, en Vimeo. Imágenes en webp dentro de `media/`.
   Motivo: GitHub Pages tiene un límite de 100 MB por archivo, ~1 GB de repo y
