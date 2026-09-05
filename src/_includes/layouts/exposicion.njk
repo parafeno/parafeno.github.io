@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+---
+{% from "partials/rejilla.njk" import rejilla %}
+
+<article class="proyecto">
+
+  <h1 class="proyecto-titulo">{{ titulo }}</h1>
+
+  <div class="proyecto-datos">
+    {% for d in datos %}<p>{{ d | safe }}</p>{% endfor %}
+    {% if anio %}<p>{{ anio }}</p>{% endif %}
+  </div>
+
+  {% if foto %}
+    <div class="proyecto-media">
+      <figure class="media">
+        {% imagen foto.src, foto.alt or titulo %}
+      </figure>
+    </div>
+  {% endif %}
+
+  {% if content %}
+    <div class="proyecto-texto prosa">
+      {{ content | safe }}
+    </div>
+  {% endif %}
+
+  <p class="etiqueta">Works in this exhibition:</p>
+  {{ rejilla(collections.proyectos | resolverProyectos(piezas)) }}
+
+</article>

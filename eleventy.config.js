@@ -61,6 +61,57 @@ module.exports = function (eleventyConfig) {
     api.getFilteredByTag("proyecto").filter((p) => esDeTipo(p, "personal")).sort(ordenar)
   );
 
+  // --- Exposiciones conjuntas ---------------------------------------------
+  // Una exposicion vive en src/exposiciones/ y tiene su propia pagina bajo
+  // /work/. Los proyectos que participaron en ella llevan el campo
+  // "exposicion: <slug-de-la-exposicion>" en su frontmatter.
+  eleventyConfig.addCollection("exposiciones", (api) =>
+    api.getFilteredByTag("exposicion")
+  );
+
+  // Agrupa una lista de proyectos ya ordenada: las piezas que comparten
+  // "exposicion" se colapsan en un solo item de grupo, en la posicion de
+  // la primera pieza que aparece. El resto de la lista no cambia de orden.
+  function agrupar(proyectos, exposiciones) {
+    const vistos = new Set();
+    const resultado = [];
+    for (const p of proyectos) {
+      const slug = p.data.exposicion;
+      if (!slug) {
+        resultado.push(p);
+        continue;
+      }
+      if (vistos.has(slug)) continue; // esta pieza ya se representa en el grupo
+      vistos.add(slug);
+      const expo = exposiciones.find((e) => e.fileSlug === slug);
+      if (!expo) {
+        resultado.push(p); // la exposicion aun no existe: se ve la pieza suelta
+        continue;
+      }
+      resultado.push({
+        esExposicion: true,
+        url: expo.url,
+        data: expo.data,
+        piezas: proyectos.filter((q) => q.data.exposicion === slug)
+      });
+    }
+    return resultado;
+  }
+
+  eleventyConfig.addCollection("personalesAgrupado", (api) =>
+    agrupar(
+      api.getFilteredByTag("proyecto").filter((p) => esDeTipo(p, "personal")).sort(ordenar),
+      api.getFilteredByTag("exposicion")
+    )
+  );
+
+  eleventyConfig.addCollection("comercialesAgrupado", (api) =>
+    agrupar(
+      api.getFilteredByTag("proyecto").filter((p) => esDeTipo(p, "comercial")).sort(ordenar),
+      api.getFilteredByTag("exposicion")
+    )
+  );
+
   // --- Imagenes ----------------------------------------------------------
   // Se usa asi:   {% imagen "/media/proyecto/01", "texto alternativo" %}
   //
@@ -98,13 +149,40 @@ module.exports = function (eleventyConfig) {
   });
 
   // --- Filtros -----------------------------------------------------------
-  // "otros": devuelve hasta n proyectos de la coleccion, quitando el actual.
-  eleventyConfig.addFilter("otros", (coleccion, urlActual, n) =>
-    coleccion.filter((p) => p.url !== urlActual).slice(0, n || 6)
-  );
-
   // "limitar": corta cualquier lista a los n primeros elementos.
   eleventyConfig.addFilter("limitar", (lista, n) => lista.slice(0, n));
+
+  // "porSlug": busca en una coleccion la entrada cuyo nombre de archivo
+  // (sin extension) es el slug dado. Se usa para ir de un proyecto a la
+  // exposicion a la que pertenece.
+  eleventyConfig.addFilter("porSlug", (coleccion, slug) =>
+    (coleccion || []).find((p) => p.fileSlug === slug)
+  );
+
+  // "resolverProyectos": convierte una lista de slugs (nombres de archivo)
+  // en las entradas reales de la coleccion de proyectos, en ese orden.
+  eleventyConfig.addFilter("resolverProyectos", (coleccion, slugs) =>
+    (slugs || [])
+      .map((slug) => (coleccion || []).find((p) => p.fileSlug === slug))
+      .filter(Boolean)
+  );
+
+  // "contieneUrl": true si alguna pieza de la lista tiene esa url. Se usa
+  // para abrir el desplegable de una exposicion cuando se esta viendo una
+  // de sus piezas. (No se usa el "selectattr" de nunjucks porque en esta
+  // version ignora el test "equalto" y solo mira si el atributo es truthy.)
+  eleventyConfig.addFilter("contieneUrl", (piezas, url) =>
+    (piezas || []).some((p) => p.url === url)
+  );
+
+  // "porAnio": reordena una lista ya agrupada (proyectos o exposiciones)
+  // por ano, el mas reciente primero. Se usa en la rejilla completa de
+  // /art/ y /commissions/, que no respeta el "orden" de destacados del
+  // indice lateral. Una exposicion usa su propio "anio", igual que un
+  // proyecto.
+  eleventyConfig.addFilter("porAnio", (lista) =>
+    [...(lista || [])].sort((a, b) => (b.data.anio || 0) - (a.data.anio || 0))
+  );
 
   return {
     dir: {

@@ -3,11 +3,8 @@ titulo: "In the flesh"
 cliente: ""
 anio: 2023
 tipo: personal
-orden: 0
-datos:
-  - "Exhibition: Las estrellas dicen <em>No</em>"
-  - "Event: ADNForum"
-  - "Venue: Plaza Colón, Madrid"
+orden: 40
+exposicion: las-estrellas-dicen-no
 miniatura:
   src: /media/in-the-flesh/miniatura
   alt: "Fotograma de In the flesh"

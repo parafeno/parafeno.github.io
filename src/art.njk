@@ -6,4 +6,5 @@ permalink: "/art/index.html"
 {% from "partials/rejilla.njk" import rejilla %}
 
 <h1 class="pagina-titulo">Art</h1>
-{{ rejilla(collections.personales) }}
+
+{{ rejilla(collections.personalesAgrupado | porAnio) }}

@@ -3,7 +3,8 @@ titulo: "VISION"
 cliente: "Charlie Smits"
 anio: 2023
 tipo: [comercial, personal]
-orden: 0
+orden: 4
+exposicion: vision
 datos:
   - "Animation for runway show"
   - "Event: Mercedes Benz Fashion Week Madrid 2023"

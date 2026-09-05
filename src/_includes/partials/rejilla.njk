@@ -1,49 +1,40 @@
 {# ------------------------------------------------------------------
-   Dos formas de listar proyectos.
-
    rejilla(): miniaturas en cuadricula. Se usa en la portada y en las
-   paginas de Comercial y Personal.
+   paginas de Art y Commissions.
 
-   lista(): solo texto, una linea por proyecto. Se usa al final de cada
-   pagina de proyecto.
+   Un item normal es un proyecto. Un item con "esExposicion: true" es
+   una exposicion conjunta: se ve como una sola tarjeta con un icono
+   que indica que agrupa varias piezas, y lleva a la ficha de la
+   exposicion en vez de a un proyecto.
    ------------------------------------------------------------------ #}
 
-{% macro rejilla(proyectos, excluir_url = "") %}
+{% macro rejilla(proyectos) %}
   <ul class="rejilla">
     {% for p in proyectos %}
-      {% if p.url != excluir_url %}
-        <li class="tarjeta">
-          <a href="{{ p.url }}">
-            <div class="tarjeta-imagen">
-              {% if p.data.miniatura %}
-                {% imagen p.data.miniatura.src,
-                          p.data.miniatura.alt or p.data.titulo,
-                          "(max-width: 760px) 50vw, 300px" %}
-              {% endif %}
-            </div>
-            <div class="tarjeta-texto">
-              <span class="tarjeta-titulo">{{ p.data.titulo }}</span>
-              <span class="tarjeta-meta">
+      <li class="tarjeta{% if p.esExposicion %} tarjeta-exposicion{% endif %}">
+        <a href="{{ p.url }}">
+          <div class="tarjeta-imagen">
+            {% if p.data.miniatura %}
+              {% imagen p.data.miniatura.src,
+                        p.data.miniatura.alt or p.data.titulo,
+                        "(max-width: 760px) 50vw, 300px" %}
+            {% endif %}
+          </div>
+          <div class="tarjeta-texto">
+            <span class="tarjeta-titulo">
+              {{ p.data.titulo }}
+              {% if p.esExposicion %}<span class="tarjeta-icono" aria-hidden="true" title="Group exhibition">⊞</span>{% endif %}
+            </span>
+            <span class="tarjeta-meta">
+              {%- if p.esExposicion -%}
+                {{ p.piezas.length }} works
+              {%- else -%}
                 {%- if p.data.cliente and (p.data.cliente | lower) != (p.data.titulo | lower) %}{{ p.data.cliente }} · {% endif -%}
                 {{ p.data.anio }}
-              </span>
-            </div>
-          </a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-{% endmacro %}
-
-{% macro lista(proyectos) %}
-  <ul class="lista-proyectos">
-    {% for p in proyectos %}
-      <li>
-        <a href="{{ p.url }}">{{ p.data.titulo }}</a>
-        <span class="lista-meta">
-          {%- if p.data.cliente and (p.data.cliente | lower) != (p.data.titulo | lower) %}{{ p.data.cliente }}, {% endif -%}
-          {{ p.data.anio }}
-        </span>
+              {%- endif -%}
+            </span>
+          </div>
+        </a>
       </li>
     {% endfor %}
   </ul>

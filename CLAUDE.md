@@ -38,6 +38,25 @@ Semplice y alojado en EasyWP.
 - El blog (hoy en el repo `parafeno.github.io`) se migrará dentro de este
   sitio, en `/blog`, cuando el portfolio esté terminado. Hasta entonces no se
   toca.
+- El índice lateral muestra solo los primeros 5 proyectos de Art y de
+  Commissions (variable `limiteIndice` en `base.njk`) según el orden ya
+  existente (`orden` y luego `anio`), con un "+" al final que lleva a
+  `/art/` o `/commissions/`, donde está la rejilla completa sin límite.
+  Los títulos "Art" y "Commissions" del índice son texto estático, no
+  enlaces: la única puerta a la rejilla completa es el "+". No es un
+  recorte aleatorio de verdad: en un sitio estático eso cambiaría en cada
+  build sin control. Subir un proyecto en el recorte es cambiar su `orden`.
+- Se quitó "Other projects" del final de la ficha de proyecto: es
+  redundante con el índice lateral, que ya los tiene todos a la vista.
+- Exposiciones conjuntas: un archivo en `src/exposiciones/` (mismas reglas
+  de nombre que `src/work/`) con su propia página en `/work/<expo>/`, texto
+  curatorial, foto de grupo opcional y la rejilla de las piezas. Cada
+  proyecto que participó lleva el campo `exposicion: <slug>` apuntando a
+  ese archivo. En Art/Commissions las piezas de una misma exposición se
+  colapsan en una sola tarjeta (con un icono ⊞); en el índice lateral es un
+  `<details>` nativo: el título enlaza a la ficha de la expo, la flecha
+  despliega las piezas sin salir de la página. Primer caso real: "Las
+  estrellas dicen No" (`src/exposiciones/las-estrellas-dicen-no.md`).
 - El WordPress de EasyWP sigue vivo hasta que este sitio esté terminado y
   convenza. No se cancela nada antes.
 
