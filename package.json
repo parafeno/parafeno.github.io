@@ -5,10 +5,12 @@
   "type": "commonjs",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "imagenes": "node scripts/imagenes.js"
   },
   "license": "UNLICENSED",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6"
+    "@11ty/eleventy": "^3.1.6",
+    "sharp": "^0.35.4"
   }
 }

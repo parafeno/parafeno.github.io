@@ -1,7 +1,7 @@
 {# ------------------------------------------------------------------
    Macro que dibuja UNA pieza de media dentro de un proyecto.
-   Entiende cuatro tipos: imagen, vimeo, youtube y video (archivo local).
-   Si manana cambias de sistema de video, solo se toca este archivo.
+   Entiende cuatro tipos: imagen, vimeo, youtube y video (archivo suelto).
+   Si algun dia cambias de sistema de video, se toca solo este archivo.
    ------------------------------------------------------------------ #}
 
 {% macro pieza(item, alt_por_defecto = "") %}
@@ -10,10 +10,7 @@
   <figure class="media media--{{ item.tipo }}">
 
     {% if item.tipo == "imagen" %}
-      <img src="{{ item.src }}"
-           alt="{{ item.alt or alt_por_defecto }}"
-           loading="lazy"
-           decoding="async">
+      {% imagen item.src, item.alt or alt_por_defecto %}
 
     {% elif item.tipo == "vimeo" %}
       <div class="marco" style="aspect-ratio: {{ ratio }}">
@@ -34,10 +31,14 @@
       </div>
 
     {% elif item.tipo == "video" %}
-      <video src="{{ item.src }}"
-             {% if item.poster %}poster="{{ item.poster }}"{% endif %}
+      {# Loop corto sin sonido, alojado en el propio repositorio.
+         El poster es la imagen que se ve mientras carga el video. #}
+      <video {% if item.poster %}poster="{{ item.poster }}"{% endif %}
              style="aspect-ratio: {{ ratio }}"
-             playsinline muted loop autoplay preload="metadata"></video>
+             playsinline muted loop autoplay preload="metadata">
+        {% if item.webm %}<source src="{{ item.webm }}" type="video/webm">{% endif %}
+        <source src="{{ item.src }}" type="video/mp4">
+      </video>
     {% endif %}
 
     {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}

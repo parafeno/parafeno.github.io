@@ -1,3 +1,7 @@
 node_modules
 _site
 .DS_Store
+
+# Los originales pesados no entran nunca en el repositorio.
+# Solo se sube lo que genera 'npm run imagenes' dentro de media/.
+originales

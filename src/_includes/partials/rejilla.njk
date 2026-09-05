@@ -5,7 +5,7 @@
    paginas de Comercial y Personal.
 
    lista(): solo texto, una linea por proyecto. Se usa al final de cada
-   pagina de proyecto y en el indice lateral.
+   pagina de proyecto.
    ------------------------------------------------------------------ #}
 
 {% macro rejilla(proyectos, excluir_url = "") %}
@@ -16,10 +16,9 @@
           <a href="{{ p.url }}">
             <div class="tarjeta-imagen">
               {% if p.data.miniatura %}
-                <img src="{{ p.data.miniatura.src }}"
-                     alt="{{ p.data.miniatura.alt or p.data.titulo }}"
-                     loading="lazy"
-                     decoding="async">
+                {% imagen p.data.miniatura.src,
+                          p.data.miniatura.alt or p.data.titulo,
+                          "(max-width: 760px) 50vw, 300px" %}
               {% endif %}
             </div>
             <div class="tarjeta-texto">

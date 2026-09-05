@@ -18,35 +18,39 @@ rol: "Dirección y CGI"
 estudio: ""                        # opcional
 orden: 0                           # súbelo (10, 20...) para fijarlo arriba
 
+# La miniatura de la rejilla. Ruta SIN extensión: el sitio elige solo
+# entre los tres tamaños que generó "npm run imagenes".
 miniatura:
-  src: /media/nombre-proyecto/miniatura.webp
+  src: /media/nombre-proyecto/miniatura
   alt: "Descripción corta de la imagen"
 
 media:
-  # Imagen
+  # Imagen. Ruta sin extensión, igual que la miniatura.
   - tipo: imagen
-    src: /media/nombre-proyecto/01.webp
+    src: /media/nombre-proyecto/01
     alt: "Descripción"
 
-  # Vídeo en Vimeo (id = el número final de la dirección del vídeo)
+  # Loop corto sin sonido, alojado aquí mismo. Menos de 10 segundos y
+  # menos de 3 MB. El poster es la imagen que se ve mientras carga.
+  - tipo: video
+    src: /media/nombre-proyecto/loop.mp4
+    poster: /media/nombre-proyecto/loop-1200.webp
+    ratio: "16 / 9"
+
+  # Pieza completa con sonido, en Vimeo.
+  # El id es el número final de la dirección del vídeo.
   - tipo: vimeo
     id: "123456789"
     ratio: "16 / 9"
     caption: ""
 
-  # Vídeo en YouTube
+  # Lo mismo en YouTube, si el cliente lo tiene ahí.
   - tipo: youtube
     id: "dQw4w9WgXcQ"
     ratio: "16 / 9"
 
-  # Vídeo como archivo suelto (solo para clips muy cortos y ligeros)
-  - tipo: video
-    src: /media/nombre-proyecto/loop.mp4
-    poster: /media/nombre-proyecto/loop.webp
-    ratio: "16 / 9"
-
-# Cada credito puede ocupar varias lineas. La barra vertical "|"
-# indica que lo de debajo se respeta tal cual, con sus saltos de linea.
+# Cada crédito puede ocupar varias líneas. La barra vertical "|"
+# indica que lo de debajo se respeta tal cual, con sus saltos de línea.
 creditos:
   - |
     Dirección y CGI:
