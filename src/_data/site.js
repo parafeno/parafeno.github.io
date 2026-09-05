@@ -2,8 +2,8 @@
 module.exports = {
   nombre: "Parafeno",
   autor: "Pablo Aragón",
-  descripcion: "Artista visual y generalista CGI. Madrid.",
+  descripcion: "Madrid based visual artist and CGI generalist.",
   url: "https://parafeno.com",
-  email: "pablo.aragon.perez@gmail.com",
+  email: "info@parafeno.com",
   idioma: "es"
 };

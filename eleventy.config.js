@@ -48,12 +48,17 @@ module.exports = function (eleventyConfig) {
     api.getFilteredByTag("proyecto").sort(ordenar)
   );
 
+  // "tipo" admite un valor suelto ("comercial") o una lista
+  // ([comercial, personal]) para los proyectos que son las dos cosas.
+  const esDeTipo = (p, t) =>
+    Array.isArray(p.data.tipo) ? p.data.tipo.includes(t) : p.data.tipo === t;
+
   eleventyConfig.addCollection("comerciales", (api) =>
-    api.getFilteredByTag("proyecto").filter((p) => p.data.tipo === "comercial").sort(ordenar)
+    api.getFilteredByTag("proyecto").filter((p) => esDeTipo(p, "comercial")).sort(ordenar)
   );
 
   eleventyConfig.addCollection("personales", (api) =>
-    api.getFilteredByTag("proyecto").filter((p) => p.data.tipo === "personal").sort(ordenar)
+    api.getFilteredByTag("proyecto").filter((p) => esDeTipo(p, "personal")).sort(ordenar)
   );
 
   // --- Imagenes ----------------------------------------------------------

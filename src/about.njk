@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+titulo: "About"
+permalink: "/about/index.html"
+---
+
+<div class="prosa bio">
+  <p>Parafeno is a Madrid based visual artist interested in telling the most
+  seemingly tender of stories that hide a deeper meaning of loss, nostalgia
+  and unknown yearning through an innocent childlike lens.</p>
+
+  <p>Guided since early in his life towards the narrativity of video games and
+  marvelled at the limitless posibilities of digital media, his style tries to
+  induce in the viewer the eerie and innocent, trembling and sweet view of a
+  small child sailing through a grown up world.</p>
+
+  <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+  <a href="https://instagram.com/parafeno">@parafeno</a></p>
+</div>
+
+<section class="bloque">
+  <p class="etiqueta">Selected clients:</p>
+  <div class="clientes">
+    {% for g in clientes %}
+      <div class="clientes-grupo">
+        <p class="clientes-titulo">{{ g.grupo }}</p>
+        <ul>
+          {% for n in g.nombres %}<li>{{ n }}</li>{% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="bloque">
+  <p class="etiqueta">Press, recognitions and events:</p>
+  <ul class="prensa">
+    {% for p in prensa %}
+      <li class="prensa-fila">
+        <div class="prensa-cuando">
+          {{ p.fecha }}{% if p.lugar %}<br>{{ p.lugar }}{% endif %}
+        </div>
+        <div class="prensa-que">
+          <p class="prensa-donde">{{ p.donde }}</p>
+          <p class="prensa-tipo">{{ p.tipo }}</p>
+          <p>{{ p.texto }}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

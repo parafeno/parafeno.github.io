@@ -1,1 +1,222 @@
-{}
+{
+  "/media/charlie-smits/01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/charlie-smits/02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/charlie-smits/03": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/charlie-smits/04": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/charlie-smits/05": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/charlie-smits/06": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/charlie-smits/07": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/charlie-smits/08": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/charlie-smits/09": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/charlie-smits/10": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/charlie-smits/11": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  },
+  "/media/charlie-smits/12": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 800
+  },
+  "/media/desigual/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/desigual/02": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/desigual/03": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 2000
+  },
+  "/media/desigual/miniatura": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 1067
+  },
+  "/media/dior/miniatura": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 1067
+  },
+  "/media/hyundai-buldak/01": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 750
+  },
+  "/media/hyundai-buldak/miniatura": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 800
+  },
+  "/media/in-the-flesh/miniatura": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 1067
+  },
+  "/media/limite/01": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/limite/02": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/limite/03": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/limite/04": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/limite/05": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/limite/06": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/limite/miniatura": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 675
+  }
+}

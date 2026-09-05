@@ -13,10 +13,18 @@ eleventyExcludeFromCollections: true
 titulo: "Título del proyecto"
 cliente: "Nombre del cliente"      # déjalo vacío si es obra personal
 anio: 2026
-tipo: comercial                    # comercial | personal
-rol: "Dirección y CGI"
-estudio: ""                        # opcional
 orden: 0                           # súbelo (10, 20...) para fijarlo arriba
+
+# Un valor suelto, o una lista si el proyecto es las dos cosas:
+#   tipo: comercial
+#   tipo: [comercial, personal]
+tipo: comercial
+
+# Líneas libres que salen bajo el cliente, encima del año. Escribe lo que
+# haga falta en cada proyecto: formato, estudio, evento, sala, residencia...
+datos:
+  - "Animation for social media"
+  - "Estudio: Nombre del estudio"
 
 # La miniatura de la rejilla. Ruta SIN extensión: el sitio elige solo
 # entre los tres tamaños que generó "npm run imagenes".

@@ -11,6 +11,7 @@
   --acento:      #ff00c8;   /* magenta de los titulos y del item activo */
   --sobre-acento:#000000;   /* color del texto encima del magenta */
   --marco:       #f2f2f2;   /* fondo de las imagenes mientras cargan */
+  --linea:       #e0e0e0;   /* filetes de separacion */
 
   --tipo: "Times New Roman", Times, Georgia, serif;
   --cuerpo: 17px;
@@ -32,6 +33,7 @@
   --acento: #ff00c8;
   --sobre-acento: #000000;
   --marco: #1a1a1a;
+  --linea: #262626;
 }
 --------------------------------------------------------------------- */
 
@@ -139,7 +141,14 @@ p { margin: 0 0 1.15em; }
 }
 
 .media { margin: 0; }
-.media img, .media video { width: 100%; height: auto; background: var(--marco); }
+.media img, .media video {
+  width: 100%;
+  height: auto;
+  /* Un vertical a lo ancho de la columna ocuparia tres pantallas de alto.
+     Con esto se limita y la pieza queda centrada dentro de su hueco. */
+  max-height: 88vh;
+  object-fit: contain;
+}
 
 .media .marco { position: relative; width: 100%; background: var(--marco); }
 .media .marco iframe {
@@ -214,6 +223,46 @@ p { margin: 0 0 1.15em; }
 .tarjeta-texto { padding-top: 5px; }
 .tarjeta a:hover .tarjeta-titulo { color: var(--acento); }
 .tarjeta-meta { color: var(--tinta-suave); }
+
+/* ---------- Pagina About --------------------------------------------- */
+
+.bio { margin-bottom: 3.5em; }
+
+.bloque { margin-bottom: 3.5em; }
+
+.clientes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5em 4em;
+}
+
+.clientes-titulo { color: var(--tinta-suave); font-style: italic; margin-bottom: 0.4em; }
+.clientes ul { list-style: none; margin: 0; padding: 0; }
+
+.prensa { list-style: none; margin: 0; padding: 0; }
+
+.prensa-fila {
+  display: flex;
+  gap: 2em;
+  padding: 1.2em 0;
+  border-top: 1px solid var(--linea, #e0e0e0);
+}
+
+.prensa-cuando {
+  flex: 0 0 7em;
+  color: var(--tinta-suave);
+}
+
+.prensa-que { flex: 1 1 auto; max-width: var(--ancho-texto); }
+.prensa-que p { margin: 0; }
+.prensa-donde { }
+.prensa-tipo { color: var(--tinta-suave); font-style: italic; margin-bottom: 0.5em !important; }
+
+@media (max-width: 600px) {
+  .prensa-fila { display: block; }
+  .prensa-cuando { margin-bottom: 0.4em; }
+  .prensa-cuando br { display: none; }
+}
 
 /* ---------- Texto corrido -------------------------------------------- */
 

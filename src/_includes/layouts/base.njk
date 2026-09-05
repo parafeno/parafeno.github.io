@@ -17,7 +17,7 @@
 
     <nav class="indice">
 
-      <a class="indice-titulo" href="/comercial/">Comercial</a>
+      <a class="indice-titulo" href="/comercial/">Commercial</a>
       <ul>
         {% for p in collections.comerciales %}
           <li><a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{{ p.data.titulo }}</a></li>
@@ -32,8 +32,8 @@
       </ul>
 
       <ul class="indice-fijo">
-        <li><a href="/sobre/" {% if page.url == "/sobre/" %}class="activo"{% endif %}>Sobre</a></li>
-        <li><a href="mailto:{{ site.email }}">Contacto</a></li>
+        <li><a href="/about/" {% if page.url == "/about/" %}class="activo"{% endif %}>About</a></li>
+        <li><a href="mailto:{{ site.email }}">Contact</a></li>
       </ul>
 
     </nav>
