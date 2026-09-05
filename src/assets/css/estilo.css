@@ -8,8 +8,12 @@
   --fondo:       #ffffff;
   --tinta:       #000000;
   --tinta-suave: #7a7a7a;
-  --acento:      #ff00c8;   /* magenta de los titulos y del item activo */
-  --sobre-acento:#000000;   /* color del texto encima del magenta */
+  /* El acento tiene dos tonos porque hace dos trabajos distintos:
+     escribir titulos sobre blanco (necesita algo de fuerza para leerse)
+     y pintar el fondo del proyecto activo (necesita ser palido). */
+  --acento:       #5f92c4;  /* titulos y enlaces */
+  --acento-fondo: #d3e4f5;  /* fondo del item activo en el indice */
+  --sobre-acento: #16324a;  /* texto encima de ese fondo */
   --marco:       #f2f2f2;   /* fondo de las imagenes mientras cargan */
   --linea:       #e0e0e0;   /* filetes de separacion */
 
@@ -23,6 +27,7 @@
   --margen: 26px;           /* margen exterior de la pagina */
   --ancho-texto: 68ch;
   --proporcion-miniatura: 4 / 3;
+  --alto-max: 76vh;         /* ninguna pieza pasa de esta altura en pantalla */
 }
 
 /* ---- Fondo oscuro: descomenta y comenta el bloque de arriba --------
@@ -30,8 +35,9 @@
   --fondo: #0d0d0d;
   --tinta: #f2f2f2;
   --tinta-suave: #8a8a8a;
-  --acento: #ff00c8;
-  --sobre-acento: #000000;
+  --acento: #8fb6dd;
+  --acento-fondo: #24425e;
+  --sobre-acento: #e8f1fa;
   --marco: #1a1a1a;
   --linea: #262626;
 }
@@ -109,7 +115,7 @@ p { margin: 0 0 1.15em; }
 
 .indice a.activo,
 .indice a.activo:hover {
-  background: var(--acento);
+  background: var(--acento-fondo);
   color: var(--sobre-acento);
 }
 
@@ -141,16 +147,38 @@ p { margin: 0 0 1.15em; }
 }
 
 .media { margin: 0; }
-.media img, .media video {
-  width: 100%;
+/* Ninguna pieza debe pasar de --alto-max. Sin esto, un vertical a lo ancho
+   de la columna mide tres pantallas de alto y hay que hacer scroll para
+   verlo entero, que es justo lo contrario de lo que quiere un portfolio.
+
+   Las imagenes se limitan solas por altura, porque el navegador conoce sus
+   proporciones. Los videos y los incrustados de YouTube no, asi que cada
+   uno declara su proporcion en --ratio y de ahi sale su ancho maximo:
+   un 9/16 limitado a 76vh de alto no puede medir mas de 76vh * 9/16. */
+
+.media img {
+  display: block;
+  max-width: 100%;
+  max-height: var(--alto-max);
+  width: auto;
   height: auto;
-  /* Un vertical a lo ancho de la columna ocuparia tres pantallas de alto.
-     Con esto se limita y la pieza queda centrada dentro de su hueco. */
-  max-height: 88vh;
-  object-fit: contain;
+  margin-inline: auto;
 }
 
-.media .marco { position: relative; width: 100%; background: var(--marco); }
+.media video {
+  display: block;
+  width: 100%;
+  max-width: calc(var(--alto-max) * var(--ratio, 16 / 9));
+  margin-inline: auto;
+}
+
+.media .marco {
+  position: relative;
+  width: 100%;
+  max-width: calc(var(--alto-max) * var(--ratio, 16 / 9));
+  margin-inline: auto;
+  background: var(--marco);
+}
 .media .marco iframe {
   position: absolute;
   inset: 0;

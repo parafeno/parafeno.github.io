@@ -1,5 +1,5 @@
 ---
-titulo: "VISION SS23 Intro"
+titulo: "VISION"
 cliente: "Charlie Smits"
 anio: 2023
 tipo: [comercial, personal]

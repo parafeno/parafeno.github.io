@@ -13,7 +13,7 @@
       {% imagen item.src, item.alt or alt_por_defecto %}
 
     {% elif item.tipo == "vimeo" %}
-      <div class="marco" style="aspect-ratio: {{ ratio }}">
+      <div class="marco" style="aspect-ratio: {{ ratio }}; --ratio: {{ ratio }}">
         <iframe src="https://player.vimeo.com/video/{{ item.id }}?title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"
                 title="{{ item.caption or alt_por_defecto }}"
                 loading="lazy"
@@ -22,7 +22,7 @@
       </div>
 
     {% elif item.tipo == "youtube" %}
-      <div class="marco" style="aspect-ratio: {{ ratio }}">
+      <div class="marco" style="aspect-ratio: {{ ratio }}; --ratio: {{ ratio }}">
         <iframe src="https://www.youtube-nocookie.com/embed/{{ item.id }}?rel=0"
                 title="{{ item.caption or alt_por_defecto }}"
                 loading="lazy"
@@ -34,7 +34,7 @@
       {# Loop corto sin sonido, alojado en el propio repositorio.
          El poster es la imagen que se ve mientras carga el video. #}
       <video {% if item.poster %}poster="{{ item.poster }}"{% endif %}
-             style="aspect-ratio: {{ ratio }}"
+             style="aspect-ratio: {{ ratio }}; --ratio: {{ ratio }}"
              playsinline muted loop autoplay preload="metadata">
         {% if item.webm %}<source src="{{ item.webm }}" type="video/webm">{% endif %}
         <source src="{{ item.src }}" type="video/mp4">

@@ -5,7 +5,7 @@ anio: 2023
 tipo: personal
 orden: 0
 datos:
-  - "Exhibition: Las estrellas dicen 'No'"
+  - "Exhibition: Las estrellas dicen <em>No</em>"
   - "Event: ADNForum"
   - "Venue: Plaza Colón, Madrid"
 miniatura:

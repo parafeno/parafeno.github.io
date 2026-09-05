@@ -75,12 +75,12 @@ module.exports = [
   {
     fecha: "Nov 23", lugar: "Madrid", donde: "ADNForum",
     tipo: "Solo Exhibition",
-    texto: "First solo expo titled ‘Las extrellas dicen No’ open to the public at Plaza Colón"
+    texto: "First solo expo titled ‘Las estrellas dicen <em>No</em>’ open to the public at Plaza Colón"
   },
   {
     fecha: "Oct 23", lugar: "", donde: "Interiores Magazine",
     tipo: "Article",
-    texto: "‘...Parafeno dará vida con su universo digital a la propuesta creada para la revista Interiores titulada Las extrellas dicen No...’"
+    texto: "‘...Parafeno dará vida con su universo digital a la propuesta creada para la revista Interiores titulada Las estrellas dicen <em>No</em>...’"
   },
   {
     fecha: "Jun 23", lugar: "", donde: "Radio 3",

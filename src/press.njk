@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+titulo: "Press"
+permalink: "/press/index.html"
+---
+
+<p class="etiqueta">Press, recognitions and events:</p>
+
+<ul class="prensa">
+  {% for p in prensa %}
+    <li class="prensa-fila">
+      <div class="prensa-cuando">
+        {{ p.fecha }}{% if p.lugar %}<br>{{ p.lugar }}{% endif %}
+      </div>
+      <div class="prensa-que">
+        <p class="prensa-donde">{{ p.donde }}</p>
+        <p class="prensa-tipo">{{ p.tipo }}</p>
+        <p>{{ p.texto | safe }}</p>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

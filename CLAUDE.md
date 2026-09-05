@@ -14,6 +14,15 @@ Semplice y alojado en EasyWP.
   que se probó primero (queda en el historial de git, commit dd817f9).
 - El diagrama de nodos conectados por líneas para la portada se explora
   después, sobre el mismo modelo de datos.
+- La obra propia va primero en el índice y se llama "Art". Los encargos van
+  debajo y se llaman "Commissions". La palabra "Personal" quedaba fuera:
+  restaba peso a la obra y la hacía parecer un pasatiempo.
+- Títulos de proyecto: para encargos de marca se usa el título corto que ya
+  usaba la rejilla del sitio antiguo (Summer 24, VISION). Para la obra propia
+  se usa el nombre real de la pieza (Límite, In the flesh).
+- Ninguna pieza de media puede pasar de `--alto-max` (76vh). Un vertical a lo
+  ancho de la columna mide tres pantallas de alto y obliga a hacer scroll para
+  verlo entero.
 - Vídeo fuera del repositorio, en Vimeo. Imágenes en webp dentro de `media/`.
   Motivo: GitHub Pages tiene un límite de 100 MB por archivo, ~1 GB de repo y
   100 GB/mes de tráfico, y Git conserva los binarios en el historial para

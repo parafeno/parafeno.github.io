@@ -1,5 +1,5 @@
 ---
-titulo: "Bye Bye Summer"
+titulo: "Summer 24"
 cliente: "Desigual"
 anio: 2024
 tipo: comercial

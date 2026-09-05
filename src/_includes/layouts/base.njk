@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.idioma }}">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,23 +17,26 @@
 
     <nav class="indice">
 
-      <a class="indice-titulo" href="/comercial/">Commercial</a>
-      <ul>
-        {% for p in collections.comerciales %}
-          <li><a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{{ p.data.titulo }}</a></li>
-        {% endfor %}
-      </ul>
-
-      <a class="indice-titulo" href="/personal/">Personal</a>
+      {# La obra propia va primero y sin adjetivos. Los encargos van debajo,
+         etiquetados como lo que son. #}
+      <a class="indice-titulo" href="/personal/">Art</a>
       <ul>
         {% for p in collections.personales %}
           <li><a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{{ p.data.titulo }}</a></li>
         {% endfor %}
       </ul>
 
+      <a class="indice-titulo" href="/comercial/">Commissions</a>
+      <ul>
+        {% for p in collections.comerciales %}
+          <li><a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{{ p.data.titulo }}</a></li>
+        {% endfor %}
+      </ul>
+
       <ul class="indice-fijo">
-        <li><a href="/about/" {% if page.url == "/about/" %}class="activo"{% endif %}>About</a></li>
-        <li><a href="mailto:{{ site.email }}">Contact</a></li>
+        <li><a href="/bio/" {% if page.url == "/bio/" %}class="activo"{% endif %}>Bio</a></li>
+        <li><a href="/press/" {% if page.url == "/press/" %}class="activo"{% endif %}>Press</a></li>
+        <li><a href="/contact/" {% if page.url == "/contact/" %}class="activo"{% endif %}>Contact</a></li>
       </ul>
 
     </nav>
