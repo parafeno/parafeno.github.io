@@ -162,21 +162,18 @@ p { margin: 0 0 1.15em; }
   max-height: var(--alto-max);
   width: auto;
   height: auto;
-  margin-inline: auto;
 }
 
 .media video {
   display: block;
   width: 100%;
   max-width: calc(var(--alto-max) * var(--ratio, 16 / 9));
-  margin-inline: auto;
 }
 
 .media .marco {
   position: relative;
   width: 100%;
   max-width: calc(var(--alto-max) * var(--ratio, 16 / 9));
-  margin-inline: auto;
   background: var(--marco);
 }
 .media .marco iframe {

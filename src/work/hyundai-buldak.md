@@ -1,10 +1,11 @@
 ---
-titulo: "Hot Beyond Control"
+titulo: "Hyundai x Buldak"
 cliente: "Hyundai x Buldak"
 anio: 2026
 tipo: comercial
 orden: 10
 datos:
+  - "Hot Beyond Control"
   - "Animation for social media"
 miniatura:
   src: /media/hyundai-buldak/miniatura

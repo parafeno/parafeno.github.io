@@ -19,14 +19,14 @@
 
       {# La obra propia va primero y sin adjetivos. Los encargos van debajo,
          etiquetados como lo que son. #}
-      <a class="indice-titulo" href="/personal/">Art</a>
+      <a class="indice-titulo" href="/art/">Art</a>
       <ul>
         {% for p in collections.personales %}
           <li><a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{{ p.data.titulo }}</a></li>
         {% endfor %}
       </ul>
 
-      <a class="indice-titulo" href="/comercial/">Commissions</a>
+      <a class="indice-titulo" href="/commissions/">Commissions</a>
       <ul>
         {% for p in collections.comerciales %}
           <li><a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{{ p.data.titulo }}</a></li>

@@ -1,10 +1,11 @@
 ---
-titulo: "Summer 24"
+titulo: "Desigual"
 cliente: "Desigual"
 anio: 2024
 tipo: comercial
 orden: 0
 datos:
+  - "Bye Bye Summer"
   - "Animation for social media"
 miniatura:
   src: /media/desigual/miniatura

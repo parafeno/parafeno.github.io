@@ -22,8 +22,8 @@ El resultado queda en `_site/`, que no se sube al repositorio.
     originales/             originales pesados. NO se suben a git
     media/                  versiones optimizadas. Estas sí se suben
     scripts/imagenes.js     conversor de originales/ a media/
-    src/proyectos/          un archivo .md por proyecto
-    src/proyectos/_PLANTILLA.md   plantilla para duplicar
+    src/work/               un archivo .md por proyecto
+    src/work/_PLANTILLA.md  plantilla para duplicar
     src/_includes/layouts/  esqueletos de página
     src/_includes/partials/ trozos reutilizables (rejilla, media)
     src/_data/site.js       datos globales (nombre, email, dominio)
@@ -35,7 +35,7 @@ El resultado queda en `_site/`, que no se sube al repositorio.
 
 1. Mete los originales en `originales/nombre-del-proyecto/`.
 2. Ejecuta `npm run imagenes`. Aparecen las webp en `media/`.
-3. Duplica `src/proyectos/_PLANTILLA.md` y renómbralo. El nombre del
+3. Duplica `src/work/_PLANTILLA.md` y renómbralo. El nombre del
    archivo es la dirección de la página: minúsculas, sin acentos, con
    guiones en vez de espacios.
 4. Borra las líneas `permalink: false` y `eleventyExcludeFromCollections`.

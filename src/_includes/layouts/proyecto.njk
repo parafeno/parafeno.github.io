@@ -9,7 +9,7 @@ layout: layouts/base.njk
   <h1 class="proyecto-titulo">{{ titulo }}</h1>
 
   <div class="proyecto-datos">
-    {% if cliente %}<p>{{ cliente }}</p>{% endif %}
+    {% if cliente and cliente != titulo %}<p>{{ cliente }}</p>{% endif %}
     {% for d in datos %}<p>{{ d | safe }}</p>{% endfor %}
     {% if anio %}<p>{{ anio }}</p>{% endif %}
   </div>

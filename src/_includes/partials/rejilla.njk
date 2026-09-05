@@ -24,7 +24,7 @@
             <div class="tarjeta-texto">
               <span class="tarjeta-titulo">{{ p.data.titulo }}</span>
               <span class="tarjeta-meta">
-                {%- if p.data.cliente %}{{ p.data.cliente }} · {% endif -%}
+                {%- if p.data.cliente and p.data.cliente != p.data.titulo %}{{ p.data.cliente }} · {% endif -%}
                 {{ p.data.anio }}
               </span>
             </div>
@@ -41,7 +41,7 @@
       <li>
         <a href="{{ p.url }}">{{ p.data.titulo }}</a>
         <span class="lista-meta">
-          {%- if p.data.cliente %}{{ p.data.cliente }}, {% endif -%}
+          {%- if p.data.cliente and p.data.cliente != p.data.titulo %}{{ p.data.cliente }}, {% endif -%}
           {{ p.data.anio }}
         </span>
       </li>

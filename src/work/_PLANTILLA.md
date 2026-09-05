@@ -4,7 +4,7 @@
 # Duplica este archivo, renómbralo y borra las dos líneas de abajo
 # (permalink y eleventyExcludeFromCollections) para que se publique.
 # El nombre del archivo es la dirección: "mi-proyecto.md" da
-# parafeno.com/proyectos/mi-proyecto/
+# parafeno.com/work/mi-proyecto/
 # Usa solo minúsculas, sin acentos y con guiones en vez de espacios.
 # ==========================================================================
 permalink: false

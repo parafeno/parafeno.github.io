@@ -17,9 +17,17 @@ Semplice y alojado en EasyWP.
 - La obra propia va primero en el índice y se llama "Art". Los encargos van
   debajo y se llaman "Commissions". La palabra "Personal" quedaba fuera:
   restaba peso a la obra y la hacía parecer un pasatiempo.
-- Títulos de proyecto: para encargos de marca se usa el título corto que ya
-  usaba la rejilla del sitio antiguo (Summer 24, VISION). Para la obra propia
-  se usa el nombre real de la pieza (Límite, In the flesh).
+- Títulos de proyecto: en Commissions manda la marca (Desigual, Dior,
+  Hyundai x Buldak), no el nombre de la pieza, que baja a la primera línea
+  de `datos`. La excepción son los encargos de marcas poco conocidas, donde
+  se usa el nombre de la pieza (VISION, de Charlie Smits). En Art siempre se
+  usa el nombre de la obra (Límite, In the flesh).
+- Cuando `cliente` coincide con `titulo` no se escribe dos veces: la ficha y
+  la rejilla se lo saltan.
+- Direcciones en inglés: `/art/`, `/commissions/`, `/bio/`, `/press/`,
+  `/contact/` y `/work/<proyecto>/`. Las fichas van todas bajo `/work/`
+  porque hay proyectos que son Art y Commission a la vez y no pueden vivir
+  en dos direcciones.
 - Ninguna pieza de media puede pasar de `--alto-max` (76vh). Un vertical a lo
   ancho de la columna mide tres pantallas de alto y obliga a hacer scroll para
   verlo entero.
@@ -53,7 +61,7 @@ sin em dashes.
 
 - Nombres de campos y de clases CSS en español, sin acentos en los nombres de
   archivo ni en los identificadores.
-- Un archivo `.md` por proyecto en `src/proyectos/`. El nombre del archivo es
+- Un archivo `.md` por proyecto en `src/work/`. El nombre del archivo es
   la dirección de la página.
 - Los campos fijos de un proyecto son solo los que necesita la maquinaria:
   `titulo`, `cliente`, `anio`, `tipo` y `orden`. Todo lo demás va en `datos`,

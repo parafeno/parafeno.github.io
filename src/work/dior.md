@@ -1,10 +1,11 @@
 ---
-titulo: "Sauvage"
+titulo: "Dior"
 cliente: "Dior"
 anio: 2025
 tipo: comercial
 orden: 10
 datos:
+  - "Sauvage"
   - "Animation for social media"
 miniatura:
   src: /media/dior/miniatura
