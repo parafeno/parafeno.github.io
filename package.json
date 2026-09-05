@@ -5,8 +5,9 @@
   "type": "commonjs",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy",
-    "imagenes": "node scripts/imagenes.js"
+    "build": "node scripts/limpiar.js && eleventy",
+    "imagenes": "node scripts/imagenes.js",
+    "limpiar": "node scripts/limpiar.js"
   },
   "license": "UNLICENSED",
   "devDependencies": {

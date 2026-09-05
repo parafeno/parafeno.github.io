@@ -15,13 +15,16 @@ Para generar el sitio sin servidor:
 
     npm run build
 
-El resultado queda en `_site/`, que no se sube al repositorio.
+El resultado queda en `_site/`, que no se sube al repositorio. El comando
+borra esa carpeta antes de generarla: si no, las páginas que se renombran o
+se borran se quedarían ahí arrastrándose de una versión a otra.
 
 ## Dónde está cada cosa
 
     originales/             originales pesados. NO se suben a git
     media/                  versiones optimizadas. Estas sí se suben
     scripts/imagenes.js     conversor de originales/ a media/
+    scripts/limpiar.js      borra _site antes de cada build
     src/work/               un archivo .md por proyecto
     src/work/_PLANTILLA.md  plantilla para duplicar
     src/_includes/layouts/  esqueletos de página
