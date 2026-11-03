@@ -1,4 +1,7 @@
 ---
+# Oculto temporalmente: borra estas dos lineas para volver a publicarlo.
+eleventyExcludeFromCollections: true
+permalink: false
 titulo: "Hyundai"
 cliente: "Hyundai x Buldak"
 anio: 2026
