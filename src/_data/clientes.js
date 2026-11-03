@@ -2,7 +2,7 @@
 module.exports = [
   {
     grupo: "Brands",
-    nombres: ["Dior", "Amazon", "Hyundai", "Lexus", "Carolina Herrera",
+    nombres: ["Dior", "Amazon", "HOFF", "Lexus", "Carolina Herrera",
               "Desigual", "Puma", "David Yurman"]
   },
   {
