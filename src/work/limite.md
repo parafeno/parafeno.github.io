@@ -3,10 +3,11 @@ titulo: "Límite"
 cliente: ""
 anio: 2025
 tipo: personal
+exposicion: cuerpo-limite
 orden: 50
 datos:
   - "Short film"
-  - "Residency: Espacial 2025"
+  - "Residency: Miss Espacial, Pluto, Valencia"
   - "Institutions: Pluto, MMMAD Festival"
 miniatura:
   src: /media/limite/miniatura

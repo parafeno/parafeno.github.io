@@ -22,7 +22,7 @@
           </div>
           <div class="tarjeta-texto">
             <span class="tarjeta-titulo">
-              {{ p.data.titulo }}
+              {% if p.data.numero %}<span class="numero">{{ p.data.numero }}</span> {% endif %}{{ p.data.titulo }}
               {% if p.esExposicion %}<span class="tarjeta-icono" aria-hidden="true" title="Group exhibition">⊞</span>{% endif %}
             </span>
             <span class="tarjeta-meta">

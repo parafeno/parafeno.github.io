@@ -34,16 +34,16 @@
             {% if p.esExposicion %}
               <details class="indice-expo" {% if page.url == p.url or (p.piezas | contieneUrl(page.url)) %}open{% endif %}>
                 <summary>
-                  <a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{{ p.data.titulo }}</a>
+                  <a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{% if p.data.numero %}<span class="numero">{{ p.data.numero }}</span> {% endif %}{{ p.data.titulo }}</a>
                 </summary>
                 <ul>
                   {% for pieza in p.piezas %}
-                    <li><a href="{{ pieza.url }}" {% if page.url == pieza.url %}class="activo"{% endif %}>{{ pieza.data.titulo }}</a></li>
+                    <li><a href="{{ pieza.url }}" {% if page.url == pieza.url %}class="activo"{% endif %}>{% if pieza.data.numero %}<span class="numero">{{ pieza.data.numero }}</span> {% endif %}{{ pieza.data.titulo }}</a></li>
                   {% endfor %}
                 </ul>
               </details>
             {% else %}
-              <a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{{ p.data.titulo }}</a>
+              <a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{% if p.data.numero %}<span class="numero">{{ p.data.numero }}</span> {% endif %}{{ p.data.titulo }}</a>
             {% endif %}
           </li>
         {% endfor %}
@@ -59,16 +59,16 @@
             {% if p.esExposicion %}
               <details class="indice-expo" {% if page.url == p.url or (p.piezas | contieneUrl(page.url)) %}open{% endif %}>
                 <summary>
-                  <a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{{ p.data.titulo }}</a>
+                  <a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{% if p.data.numero %}<span class="numero">{{ p.data.numero }}</span> {% endif %}{{ p.data.titulo }}</a>
                 </summary>
                 <ul>
                   {% for pieza in p.piezas %}
-                    <li><a href="{{ pieza.url }}" {% if page.url == pieza.url %}class="activo"{% endif %}>{{ pieza.data.titulo }}</a></li>
+                    <li><a href="{{ pieza.url }}" {% if page.url == pieza.url %}class="activo"{% endif %}>{% if pieza.data.numero %}<span class="numero">{{ pieza.data.numero }}</span> {% endif %}{{ pieza.data.titulo }}</a></li>
                   {% endfor %}
                 </ul>
               </details>
             {% else %}
-              <a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{{ p.data.titulo }}</a>
+              <a href="{{ p.url }}" {% if page.url == p.url %}class="activo"{% endif %}>{% if p.data.numero %}<span class="numero">{{ p.data.numero }}</span> {% endif %}{{ p.data.titulo }}</a>
             {% endif %}
           </li>
         {% endfor %}

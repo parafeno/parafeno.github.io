@@ -76,6 +76,11 @@ module.exports = function (eleventyConfig) {
   // Agrupa una lista de proyectos ya ordenada: las piezas que comparten
   // "exposicion" se colapsan en un solo item de grupo, en la posicion de
   // la primera pieza que aparece. El resto de la lista no cambia de orden.
+  const posicion = (expo, p) => {
+    const i = (expo.data.piezas || []).indexOf(p.fileSlug);
+    return i === -1 ? Infinity : i;
+  };
+
   function agrupar(proyectos, exposiciones) {
     const vistos = new Set();
     const resultado = [];
@@ -96,7 +101,10 @@ module.exports = function (eleventyConfig) {
         esExposicion: true,
         url: expo.url,
         data: expo.data,
-        piezas: proyectos.filter((q) => q.data.exposicion === slug)
+        // Las piezas siguen el orden de la lista "piezas" de la exposicion.
+        piezas: proyectos
+          .filter((q) => q.data.exposicion === slug)
+          .sort((a, b) => posicion(expo, a) - posicion(expo, b))
       });
     }
     return resultado;

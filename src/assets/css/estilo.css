@@ -14,6 +14,7 @@
   --acento:       #5f92c4;  /* titulos y enlaces */
   --acento-fondo: #d3e4f5;  /* fondo del item activo en el indice */
   --sobre-acento: #16324a;  /* texto encima de ese fondo */
+  --numero:      #7eaad6;   /* numero de obra delante del titulo */
   --marco:       #f2f2f2;   /* fondo de las imagenes mientras cargan */
   --linea:       #e0e0e0;   /* filetes de separacion */
 
@@ -38,6 +39,7 @@
   --acento: #8fb6dd;
   --acento-fondo: #24425e;
   --sobre-acento: #e8f1fa;
+  --numero: #5f7f9f;
   --marco: #1a1a1a;
   --linea: #262626;
 }
@@ -369,4 +371,11 @@ p { margin: 0 0 1.15em; }
      proyecto. Aqui se quita y el indice sube justo debajo del logo. */
   .portada .marca  { margin-bottom: 0.6em; }
   .portada .indice { border-top: none; padding-top: 0; }
+}
+
+/* ---------- Numero de obra delante del titulo (01, 02...) ------------- */
+.numero {
+  font-size: 0.8em;
+  color: var(--numero);
+  font-variant-numeric: tabular-nums;
 }

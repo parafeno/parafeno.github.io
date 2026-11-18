@@ -294,6 +294,13 @@
     "ancho": 600,
     "alto": 750
   },
+  "/media/hbo-house-of-the-dragon/miniatura": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 750
+  },
   "/media/hoff/miniatura": {
     "anchos": [
       600,
@@ -682,6 +689,13 @@
     "ancho": 1200,
     "alto": 1200
   },
+  "/media/pluto/miniatura": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 1067
+  },
   "/media/puma/01": {
     "anchos": [
       600
@@ -895,6 +909,15 @@
     "ancho": 1200,
     "alto": 800
   },
+  "/media/solid-melts-into-air/miniatura": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 3556
+  },
   "/media/vision-bags/01": {
     "anchos": [
       600,
@@ -968,6 +991,117 @@
     ],
     "ancho": 1200,
     "alto": 1200
+  },
+  "/media/whats-love-got-to-do-with-anything/backfed": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 1067
+  },
+  "/media/whats-love-got-to-do-with-anything/brand-loyalty": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 3556
+  },
+  "/media/whats-love-got-to-do-with-anything/gdp-ghost": {
+    "anchos": [
+      600
+    ],
+    "ancho": 600,
+    "alto": 1067
+  },
+  "/media/whats-love-got-to-do-with-anything/goliath-safetensors": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 3556
+  },
+  "/media/whats-love-got-to-do-with-anything/hyperscaler": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 3556
+  },
+  "/media/whats-love-got-to-do-with-anything/intermediation-layer": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 3556
+  },
+  "/media/whats-love-got-to-do-with-anything/macro-memo": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 3556
+  },
+  "/media/whats-love-got-to-do-with-anything/rockbed": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 3556
+  },
+  "/media/whats-love-got-to-do-with-anything/silver-collar-01": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1500
+  },
+  "/media/whats-love-got-to-do-with-anything/silver-collar-02": {
+    "anchos": [
+      600,
+      1200
+    ],
+    "ancho": 1200,
+    "alto": 1500
+  },
+  "/media/whats-love-got-to-do-with-anything/softwear": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/whats-love-got-to-do-with-anything/sorry-name-for-an-angel": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 1125
+  },
+  "/media/whats-love-got-to-do-with-anything/the-canary": {
+    "anchos": [
+      600,
+      1200,
+      2000
+    ],
+    "ancho": 2000,
+    "alto": 3556
   },
   "/media/worlds-fair/01": {
     "anchos": [

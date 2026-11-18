@@ -2,7 +2,7 @@
 titulo: "Vision Bags"
 cliente: "Charlie Smits"
 anio: 2023
-tipo: [comercial, personal]
+tipo: comercial
 orden: 4
 exposicion: vision
 datos:

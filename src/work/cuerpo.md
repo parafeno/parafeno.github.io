@@ -3,11 +3,12 @@ titulo: "Cuerpo"
 cliente: ""
 anio: 2025
 tipo: personal
+exposicion: cuerpo-limite
 orden: 30
 datos:
   - "Installation"
-  - "Residency: Portal"
-  - "Institution: Pluto"
+  - "Residency: Portal, Pluto, Valencia"
+  - "Supported by the PICE grant"
 miniatura:
   src: /media/cuerpo/01
   alt: "Cuerpo"

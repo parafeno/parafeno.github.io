@@ -5,16 +5,12 @@ layout: layouts/base.njk
 
 <article class="proyecto">
 
-  <h1 class="proyecto-titulo">{{ titulo }}</h1>
+  <h1 class="proyecto-titulo">{% if numero %}<span class="numero">{{ numero }}</span> {% endif %}{{ titulo }}</h1>
 
   <div class="proyecto-datos">
     {% if cliente and (cliente | lower) != (titulo | lower) %}<p>{{ cliente }}</p>{% endif %}
     {% for d in datos %}<p>{{ d | safe }}</p>{% endfor %}
     {% if anio %}<p>{{ anio }}</p>{% endif %}
-    {% if exposicion %}
-      {% set expo = collections.exposiciones | porSlug(exposicion) %}
-      {% if expo %}<p>Part of the exhibition <a href="{{ expo.url }}">{{ expo.data.titulo }}</a></p>{% endif %}
-    {% endif %}
   </div>
 
   {% if media and media.length %}
