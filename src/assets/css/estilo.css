@@ -206,13 +206,13 @@ p { margin: 0 0 1.15em; }
   max-width: calc(var(--alto-max) * var(--ratio, 16 / 9));
 }
 
-.media .marco {
+.media .encaje {
   position: relative;
   width: 100%;
   max-width: calc(var(--alto-max) * var(--ratio, 16 / 9));
   background: var(--marco);
 }
-.media .marco iframe {
+.media .encaje iframe {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -361,8 +361,8 @@ p { margin: 0 0 1.15em; }
   .lateral { display: contents; }
 
   .marca    { order: 1; margin-bottom: 1.8em; }
-  .contenido { order: 2; max-width: none; padding-bottom: 3em; }
-  .indice   { order: 3; border-top: 1px solid var(--tinta-suave); padding-top: 1.8em; }
+  .contenido { order: 2; max-width: none; padding-bottom: 3em; align-self: stretch; min-width: 0; }
+  .indice   { order: 3; align-self: stretch; border-top: 1px solid var(--tinta-suave); padding-top: 1.8em; }
 
   .rejilla { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
 

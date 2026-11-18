@@ -9,7 +9,7 @@ exposicion: whats-love-got-to-do-with-anything
 datos:
   - "Also exhibited at Espacio Plomo, 2026"
 miniatura:
-  src: /media/{E}/silver-collar-01
+  src: /media/whats-love-got-to-do-with-anything/silver-collar-01
   alt: "silver collar"
 media:
   - tipo: imagen

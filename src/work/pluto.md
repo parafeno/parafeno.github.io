@@ -10,8 +10,12 @@ miniatura:
   src: /media/pluto/miniatura
   alt: "Fotograma de Miss Espacial 2027"
 media:
-  - tipo: video
-    src: /media/pluto/video-01.mp4
-    poster: /media/pluto/miniatura-1200.webp
+  - tipo: vimeo
+    id: "1247982661"
     ratio: "9 / 16"
+    caption: "Miss Espacial 2027"
+creditos:
+  - |
+    Sound:
+    Adrian Hernández
 ---
